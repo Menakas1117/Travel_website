@@ -9,7 +9,12 @@
 <body>
     <nav class="navbar">
         <h1 class="logo">ADVENTURE</h1>
-        <ul class="nav-links">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href=" ">Home</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="explore">Explore</a></li>
@@ -86,5 +91,13 @@
             </p>
             <p>© Copyright 2025 Travel and Adventure | Cancellation & Refund Policy | Privacy Policy | Terms & Conditions</p>
         </section>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
